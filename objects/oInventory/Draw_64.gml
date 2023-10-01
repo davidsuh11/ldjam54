@@ -8,6 +8,8 @@ draw_sprite_stretched(
 	_inv_height	
 )
 
+display_set_gui_maximise(2, 2);
+
 function draw_item(_item, _x, _y) {
 	var _item_data = global.ITEMS[_item]
 	var _item_spr = _item_data.spr

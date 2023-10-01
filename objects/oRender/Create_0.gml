@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+display_reset(0, false)
 layer_set_visible("Map", false)
 global.map = ds_grid_create(MAP_W, MAP_H)
+global.camx = int64(tileToIsometricX(16, 32))
+global.camy = int64(tileToIsometricY(16, 32))
 
 var _tilemap = layer_tilemap_get_id("Map")
 
