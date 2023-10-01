@@ -22,10 +22,13 @@ if (mouse_check_button(mb_left)) {
 	}	
 } else {
 	if (drag_item != noone ) {
-		if (mouse_over != noone)  {
+		if (mouse_over != noone && global.inventory[mouse_over] == noone)  {
 			global.inventory[mouse_over] = global.inventory[drag_item];
 			global.inventory[drag_item] = noone;
+			update_inventory_components();
 		}
 		drag_item = noone;
 	}
 }
+
+// BFS to check connectivity
