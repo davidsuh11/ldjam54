@@ -18,7 +18,7 @@ for (var _tx = 0; _tx < MAP_W; ++_tx) {
 		
 		var _tile_index = _tiledata[TILE.SPRITE]
 		var _tile_z = _tiledata[TILE.Z]
-		if (_tile_index != 0) draw_sprite(spr_tile1, _tile_index - 1, _sx, _sy + _tile_z)
+		if (_tile_index != 0) draw_sprite(spr_tiles, _tile_index - 1, _sx, _sy + _tile_z)
 	}
 }
 

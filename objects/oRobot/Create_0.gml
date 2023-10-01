@@ -5,3 +5,4 @@ global.ctx = tileToIsometricX(12,7)
 global.cty = tileToIsometricY(12,7)
 curx = global.ctx
 cury = global.cty
+dir = 0

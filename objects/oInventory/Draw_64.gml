@@ -1,17 +1,11 @@
 
-draw_sprite_stretched(
-	spr_inventory,
-	0,
-	_inv_x,
-	_inv_y,
-	_inv_width,
-	_inv_height	
-)
 
 display_set_gui_maximise(2, 2);
 
 
 
+var mouse_xx = (mouse_x - global.camx + SCREEN_W div 2)
+var mouse_yy = (mouse_y - global.camy + SCREEN_H div 2)
 function draw_item(_item, _x, _y, _ix, _iy) {
 	var _item_data = _item
 	var _item_spr = _item_data.spr
@@ -45,24 +39,36 @@ function draw_item(_item, _x, _y, _ix, _iy) {
 		_y + (_item_data.size[1] * 16 - sprite_get_height(_item_spr)) div 2);
 	}
 }
-for (var _ix = 0; _ix < INV_SLOT_ROW; ++_ix) {
-	for (var _iy = 0; _iy < INV_SLOT_COL; ++_iy) {
-		var _coord = slot_coord_to_render_coord(_ix, _iy)
-		
-		draw_sprite(spr_slot, 0, _coord[0], _coord[1])
-	}
-}
 
-for (var _ix = 0; _ix < INV_SLOT_ROW; ++_ix) {
-	for (var _iy = 0; _iy < INV_SLOT_COL; ++_iy) {
-		if (global.inventory[_ix*INV_SLOT_COL + _iy] != noone && drag_item != _ix*INV_SLOT_COL + _iy) {
+if (show_inventory) {
+	draw_sprite_stretched(
+		spr_inventory,
+		0,
+		_inv_x,
+		_inv_y,
+		_inv_width,
+		_inv_height	
+	)
+
+	for (var _ix = 0; _ix < INV_SLOT_ROW; ++_ix) {
+		for (var _iy = 0; _iy < INV_SLOT_COL; ++_iy) {
 			var _coord = slot_coord_to_render_coord(_ix, _iy)
-			draw_item(global.inventory[_ix*INV_SLOT_COL + _iy], _coord[0], _coord[1], _ix, _iy)
+		
+			draw_sprite(spr_slot, 0, _coord[0], _coord[1])
 		}
 	}
-}
 
-if (drag_item != noone) {
-	draw_item(global.inventory[drag_item], mouse_x + drag_offset_x, mouse_y + drag_offset_y)
+	for (var _ix = 0; _ix < INV_SLOT_ROW; ++_ix) {
+		for (var _iy = 0; _iy < INV_SLOT_COL; ++_iy) {
+			if (global.inventory[_ix*INV_SLOT_COL + _iy] != noone && drag_item != _ix*INV_SLOT_COL + _iy) {
+				var _coord = slot_coord_to_render_coord(_ix, _iy)
+				draw_item(global.inventory[_ix*INV_SLOT_COL + _iy], _coord[0], _coord[1], _ix, _iy)
+			}
+		}
+	}
+	
+	if (drag_item != noone) {
+		draw_item(global.inventory[drag_item], mouse_xx + drag_offset_x, mouse_yy + drag_offset_y)
+	}
 }
 

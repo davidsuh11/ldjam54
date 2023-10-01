@@ -56,11 +56,13 @@ function move_down() {
 }
 
 function move_left() {
+	dir = 0
 	try_move(-0.5, -0.25)
 	try_move(-0.5, 0.25)
 }
 
 function move_right() {
+	dir = 1
 	try_move(0.5, -0.25)
 	try_move(0.5, 0.25)
 }

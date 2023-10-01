@@ -41,7 +41,7 @@
     {"id":{"name":"oRender","path":"objects/oRender/oRender.yy",},},
     {"id":{"name":"spr_battery","path":"sprites/spr_battery/spr_battery.yy",},},
     {"id":{"name":"coords","path":"scripts/coords/coords.yy",},},
-    {"id":{"name":"spr_tile1","path":"sprites/spr_tile1/spr_tile1.yy",},},
+    {"id":{"name":"spr_tiles","path":"sprites/spr_tiles/spr_tiles.yy",},},
     {"id":{"name":"spr_wire_gate","path":"sprites/spr_wire_gate/spr_wire_gate.yy",},},
     {"id":{"name":"spr_slot","path":"sprites/spr_slot/spr_slot.yy",},},
     {"id":{"name":"oInventory","path":"objects/oInventory/oInventory.yy",},},
@@ -53,7 +53,7 @@
     {"id":{"name":"spr_wire","path":"sprites/spr_wire/spr_wire.yy",},},
     {"id":{"name":"spr_inventory","path":"sprites/spr_inventory/spr_inventory.yy",},},
     {"id":{"name":"macros","path":"scripts/macros/macros.yy",},},
-    {"id":{"name":"Sprite2","path":"sprites/Sprite2/Sprite2.yy",},},
+    {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},

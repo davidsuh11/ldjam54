@@ -24,6 +24,7 @@ _inv_y = SCREEN_H/2 - _inv_height/2
 drag_item = noone;
 drag_offset_x = 0;
 drag_offset_y = 0;
+show_inventory = false;
 
 components = []
 active_components = []

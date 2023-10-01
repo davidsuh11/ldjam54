@@ -30,6 +30,6 @@
     {"name":"oRobot","order":1,"path":"objects/oRobot/oRobot.yy",},
     {"name":"spr_wire","order":10,"path":"sprites/spr_wire/spr_wire.yy",},
     {"name":"spr_inventory","order":4,"path":"sprites/spr_inventory/spr_inventory.yy",},
-    {"name":"Sprite2","order":1,"path":"sprites/Sprite2/Sprite2.yy",},
+    {"name":"spr_tileset","order":1,"path":"sprites/spr_tileset/spr_tileset.yy",},
   ],
 }
