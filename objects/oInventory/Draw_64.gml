@@ -23,7 +23,7 @@ function draw_item(_item, _x, _y, _ix, _iy) {
 		if (_iy) array_push(_to_check, [_ix, _iy-1, DIRS.LEFT]);
 		if (_ix < INV_SLOT_COL-1)  array_push(_to_check, [_ix+1, _iy, DIRS.DOWN]);
 		if (_iy < INV_SLOT_ROW-1)  array_push(_to_check, [_ix, _iy+1, DIRS.RIGHT]);
-
+	
 		var _wire_flags = 0;
 		for (var _i=0; _i<array_length(_to_check); ++_i) {
 			var _chk_coords = _to_check[_i];
@@ -71,4 +71,5 @@ if (show_inventory) {
 		draw_item(global.inventory[drag_item], mouse_xx + drag_offset_x, mouse_yy + drag_offset_y)
 	}
 }
+
 
